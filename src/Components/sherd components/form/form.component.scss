@@ -1,0 +1,81 @@
+section.bottom{
+    .sec_inputs{
+
+        label{
+            margin-bottom: .7rem;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: #EAEAEA;
+        }
+        input,textarea{
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: var(--text-color2);
+            background-color: var(--second-bg) ;
+            border-radius: 12px;
+            &:active,&:focus,&:hover,&:focus-visible{
+                border: 1px solid white !important;
+                background-color: var(--second-bg)  !important;
+                box-shadow: none !important;
+
+            }
+        }
+        button{
+            background-color: rgb(250,250,250);
+            color: #0B0A0A;
+            font-weight: 500;
+        }
+    }
+    .sec_text{
+        p{
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        h2{
+            font-size: 48px;
+            line-height: 60px;
+        }
+        p.h2{
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+    }
+}
+@media screen and (max-width: 1200px) {
+
+    section.bottom{
+        .sec_inputs{
+            label{
+                margin-bottom: .7rem;
+                font-size: 14px;
+                line-height: 21px;
+            }
+            input,textarea{
+                font-size: 14px;
+                line-height: 21px;
+            }
+            // button{
+            // }
+        }
+        .sec_text{
+            p{
+                font-size: 14px;
+                line-height: 21px;
+            }
+            h2{
+                font-size: 48px;
+                line-height: 60px;
+            }
+            p.h2{
+                font-size: 24px;
+                line-height: 32px;
+            }
+    
+        }
+    }
+}

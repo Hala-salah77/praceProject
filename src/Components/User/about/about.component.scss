@@ -1,0 +1,380 @@
+section.top {
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(75, 142, 94, 0.16);
+    filter: blur(50px);
+    z-index:-1;
+    width: 705.4px;
+    height: 444.81px;
+    top: 60px;
+    right: -25%;
+    transform: rotate(147deg);
+  }
+  .scroll-indicator {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .circle-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 50%;
+      animation: rotateText 10s linear infinite; // حركة الدوران
+      }
+      
+      .circle-text span {
+          position: absolute;
+      transform-origin: center;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 12px;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 2px;
+      }
+  
+      // توزيع النص حول الدائرة
+      $num-chars: 38;
+      @for $i from 1 through $num-chars {
+          .circle-text span:nth-child(#{$i}) {
+              transform: rotate(#{($i - 1) * calc(360deg / $num-chars)}) translate(70px);
+      }
+      }
+      .arrow{
+          transform: rotate(90deg);
+      }
+  }
+  h2{
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: 500;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .header{
+    h2.h1{
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 86px;
+      background: linear-gradient(274.23deg,  rgba(255, 255, 255, 0) 10.68%, #FFFFFF 94.92%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2.blured{
+      overflow: hidden !important;
+      span{
+        font-weight: 100;
+        font-size: 70px;
+        line-height: 84px;
+        // filter: blur(9px);  
+        color:var(--main-head);        
+        position: relative;
+        overflow: hidden !important;
+        // filter: blur(2px) ;
+        animation: blured_2 5s ease infinite ;
+        @keyframes blured_2 {
+          0%{
+            filter: blur(0px);
+          }
+          50%{
+            filter: blur(5px);
+          }
+          100%{
+            filter: blur(0px); 
+          }            
+        }
+        .in_h{
+          position: absolute;
+          content: '';
+          top: -10px;
+          bottom: -10px;
+          right: -10px;
+          left: -10px;
+          // background-color: rgba(0, 0, 0, 0.25);
+          // filter: blur(10px) ;
+          // animation: blured 10s ease infinite ;  
+          @keyframes blured {
+            0%{
+              transform:translateX(0%);
+              background-color:rgba(14, 14, 14, 0.9) ; 
+            }
+            50%{
+              transform:translateX(100%);
+            }
+            100%{
+              transform:translateX(0%);
+              background-color:rgba(14, 14, 14, 0.9) ; 
+            }
+            
+          }  
+          &::before{
+            position: absolute;
+            content: '';
+            top: -10px;
+            bottom: -10px;
+            right: -10px;
+            left: -10px;
+            // background-color: rgba(14, 14, 14, 0.8);
+            // filter: blur(10px) ;  
+            // animation: blured 10s ease infinite ;          
+          }
+        }
+
+      }
+    }
+  }
+}  
+section.mid{
+  .cardy{
+    position: relative;
+    overflow: hidden;
+    &::after{
+      position: absolute;
+      content: '';
+      top: -10px;
+      bottom: -10px;
+      right: -10px;
+      left: -10px;
+      background-color: rgba(0, 0, 0, 0.25);
+      filter: blur(50px) ;
+      background: radial-gradient(50% 50% at 50% 50%, #2D2D2D 0%, #151515 100%) ;
+      z-index: -1;
+    }
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 9rem;
+    
+    h3{
+      font-size:40px;
+      line-height: 54px;
+    }
+    p{
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+      color: rgba(128, 128, 128, 1);
+    }
+  }
+}
+section.to_projects{
+  background-image: url('./../../../assets/ServicesLinesContainerCopy11.png');
+  background-size: cover;
+  object-fit: unset;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+
+  h3{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--main-head);
+  }
+  button{
+    font-weight: 00;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main-head);
+    border-radius: 42px;
+    padding: 12px 24px;
+    border: 2px solid var(--main-head);
+    svg{
+      margin-left: 10px;
+    }
+
+  }
+}
+section.slider{
+  position: relative;
+  overflow: hidden;
+  // background-color: rgba( rgba(14, 14, 14,0.5));
+  &::after{
+    position: absolute;
+    content: '';
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-image: url('./../../../assets/Bento 4 (1).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: -1;
+  }
+  span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main-head);
+    background-color: rgba(21, 21, 21, 1);
+    padding: 16px 40px;
+    border-radius: 30px;
+  }
+  .header_sec{
+    p{
+      strong{
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 72px;
+        color: var(--main-head);
+      }
+
+    }
+  }
+  .the_card{
+    position: relative;
+    overflow: hidden;
+
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: -1;
+      filter: blur(50px) ;
+      background: radial-gradient(50% 50% at 50% 50%, #2D2D2D 0%, #151515 100%) ;
+    }
+    &::before{
+      position: absolute;
+      content: '';
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      background-color: rgb(14, 14, 14);
+      z-index: -2;
+    }
+    border-radius: 24px;
+    padding: 30px;
+    position: relative;
+    .img_home{
+      z-index: 1;
+      h3{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      p{
+        
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      img{
+        width: 56px; 
+        height: 56px;
+      }
+    }
+  }
+}
+
+  // حركة دوران النص
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+//responsive
+@media screen and (max-width: 1200px) {
+  section.top {
+    &::after{
+      width: 405.4px;
+      height: 244.81px;
+      top: 90px;
+    }
+    h2{
+      font-size: 24px;
+      line-height: 28.4px;
+      text-align: center;
+    }
+    .header{
+      h2.h1{
+        font-size: 52px;
+        line-height: 60px;
+        text-align: center;
+      }
+      h2.blured{
+        text-align: center;
+        span{
+          text-align: center;
+          font-size: 50px;
+          line-height: 60px;
+        }
+  
+      }
+      
+    }
+  }  
+  section.mid{
+    .cardy{
+      padding: 10px 0px 0px 0px;
+      margin-bottom: 5rem;
+      
+      h3{
+        font-size:28px;
+        line-height: 40px;
+      }
+      p{
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  section.to_projects{
+    background-size: unset;
+    object-fit: cover;
+    h3{
+      font-size: 24px;
+      line-height: 30px;
+    }
+    button{
+      font-size: 14px;
+      line-height: 20px;
+      padding: 10px 20px;
+      svg{
+        margin-left: 8px;
+      }  
+    }
+  }
+  section.slider{
+    span{
+      font-size: 14px;
+      line-height: 20px;
+      padding: 12px 20px;
+    }
+    .header_sec{
+      p{
+        strong{
+          font-size: 28px;
+          line-height: 72px;
+          background-color: transparent;
+          padding: unset;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
+  

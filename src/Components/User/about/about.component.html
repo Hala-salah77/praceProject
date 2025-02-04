@@ -1,0 +1,173 @@
+<section class="sec_padding top overflow-hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column">
+
+                <div class="col-12 d-flex flex-column flex-lg-row justify-content-between mt-5">
+                    <div >
+                        <h2>Imagine a place where the lines <br> between imagination and reality blur.</h2>
+                    </div>
+    
+                    <div class="scroll-indicator mx-auto mt-5 mt-lg-0 mx-lg-0">
+                        <div class="circle-text">
+                          <span>S</span>
+                          <span>C</span>
+                          <span>R</span>
+                          <span>O</span>
+                          <span>L</span>
+                          <span>L</span>
+                          <span>&nbsp;</span>
+                          <span>T</span>
+                          <span>O</span>
+                          <span>&nbsp;</span>
+                          <span>S</span>
+                          <span>E</span>
+                          <span>E</span>
+                          <span>&nbsp;</span>
+                          <span>M</span>
+                          <span>O</span>
+                          <span>R</span>
+                          <span>E</span>
+                          <span>&nbsp;</span>
+                          <span>S</span>
+                          <span>C</span>
+                          <span>R</span>
+                          <span>O</span>
+                          <span>L</span>
+                          <span>L</span>
+                          <span>&nbsp;</span>
+                          <span>T</span>
+                          <span>O</span>
+                          <span>&nbsp;</span>
+                          <span>S</span>
+                          <span>E</span>
+                          <span>E</span>
+                          <span>&nbsp;</span>
+                          <span>M</span>
+                          <span>O</span>
+                          <span>R</span>
+                          <span>E</span>
+    
+                        </div>
+                        <div class="arrow">
+                            <svg width="36" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 8L22 12L18 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                        </div>
+                    </div>
+                      
+                </div>
+
+                <div class="header col-12 text-center mt-4">
+                    <h2 class="h1 my-5 ">A realm where digital dreams <br> are not just envisioned but </h2>
+                    <h2 class="blured"><span class="h2 p-2"> brought vividly to life. <div class="in_h"></div></span></h2>
+                    
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec_padding mid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 gap-5">
+
+                <div class="cardy d-flex flex-lg-row flex-column align-items-center ">
+                    <div class="col-12 col-lg-6 p-5">
+                        <h3 class="mb-4">VISION</h3>
+                        <p>Our vision is to create a future where technology is used to empower businesses and improve lives.</p>
+                        <p>We envision a universe where boundaries are nonexistent, and BRACE is the nexus where imagination converges with reality to create the extraordinary in the world of technology.</p>
+                    </div>
+                    <div class="col-12 col-lg-6  p-5">
+                        <figure class="col-12 text-center">
+                            <img class="w-100" src="./../../../assets/Frame (1).png" alt="..">
+                        </figure>
+                    </div>
+
+                </div>
+                <div class="cardy d-flex flex-lg-row flex-column align-items-center">
+
+                    <div class="col-12 col-lg-6  p-5">
+                        <figure class="col-12 text-center">
+                            <img class="w-100" src="./../../../assets/Frame (2).png" alt="..">
+                        </figure>
+                    </div>
+
+                    <div class="col-12 col-lg-6 p-5">
+                        <h3 class="mb-4">MISSION</h3>
+                        <p>Revolutionize the digital landscape by transforming visionary ideas into tangible innovations. </p>
+                        <p>At BRACE, we’re on a quest to merge technology with creativity, crafting high-quality software solutions that not only anticipate the future but actively shape it.</p>
+                        <p>Watch the future build piece by piece in front of your eyes through our technological realm.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" m-0 p-0 to_projects vh-100 align-items-center position-relative">
+    <div class="container h-100 ">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="col-12 col-lg-8 text-center ">
+                <h3 class="px-3 px-lg-5">Embrace the future & BRACE yourself for an imaginative technological reality.</h3>
+                <button [routerLink]="['/case-studies']" class="btn mt-4" type="submit">Discover our projects
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 8L22 12L18 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+        
+    </div>
+</section>
+<section class="sec_padding slider mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-12 header_sec">
+                    <span class="h4 my-5">Testimonials</span>
+                    <p class="h_2 mt-5">
+                        <strong>Our customers</strong><br>
+                        <strong>love what we do</strong>
+                    </p>
+                </div>
+                <div class="card bg-transparent border-0 position-relative">
+                    <p-carousel 
+                        [value]="products" 
+                        [circular]="false" 
+                        [responsiveOptions]="responsiveOptions">
+                            <ng-template let-product pTemplate="item">
+                                <div class="position-relative m-2 p-3">
+                                    <div class="the_card mb-3">
+                                        <div class=" mx-auto img_home d-flex flex-row">
+                                            <div>
+                                                <img 
+                                                    src="./../../../assets/home/{{product.image}}" 
+                                                    alt="{{product.name}}" 
+                                                    class="w-full rounded-circle"/>
+                                            </div>
+                                            <div class="ms-3 mb-4">
+                                                <h3 class="mb-0">{{product.h3_text}}</h3>
+                                                <p>{{product.p_description}}</p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-5">“As promised, our clients’ success is our success. That is why every project we undertake is a partnership built on trust, collaboration, and a shared vision for innovation.”</p>
+                                        <img class="mb-0 mt-5" src="./../../../assets/Vector (1).png" alt="">
+                                    </div>
+
+                                </div>
+                            </ng-template>
+                    </p-carousel>
+                </div>
+    
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<app-footer></app-footer>

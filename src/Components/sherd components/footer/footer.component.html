@@ -1,0 +1,42 @@
+<footer class="sec_padding footer pb-0">
+    <section >
+        <div class="container">
+            <div class="row top_footer"  *ngIf="is_show">
+                <div class="col-12 text-center ">
+                    <p class="">Need help with your projects?</p>
+                    <h2>Say Hello!</h2>
+                    <button (click)="scrolltop()" class="btn rounded-pill" type="submit" [routerLink]="['/contact']">Contact us</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row bottom_footer">
+                <div class=" col-12 d-flex flex-column flex-lg-row">
+                    <div class="col-12 col-lg-6 mb-5 ">
+                        <figure>
+                            <a href="#" title="logo">
+                                <img src="./../../../assets/brace-logo.png" alt="logo">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class=" col-12 col-lg-6 d-flex flex-wrap flex-lg-row justify-content-around ps-lg-5 mb-5">
+                        <ul class="col-4 list-unstyled Company d-flex flex-column ">
+                            <li class="m_b_4"><span href="#">Company</span></li>
+                            <li *ngFor="let item3 of companyLinks"><a (click)="scrolltop()" [routerLink]="[item3.route]">{{item3.label}}</a></li>
+
+                        </ul>
+                        <ul class="col-4 list-unstyled Social d-flex flex-column ">
+                            <li  class="m_b_4"><span href="#">Social</span></li>
+                            <li  *ngFor="let item1 of socialLinks"><a [href]="item1.url">{{item1.label}}</a></li>
+                        </ul>
+                        <ul class="col-4 list-unstyled GetInTouch d-flex flex-column ">
+                            <li class="m_b_4"><span href="#">Get in touch</span></li>
+                            <li *ngFor="let item of contactInfo"><a [href]="item.url" >{{item.label}}l</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>

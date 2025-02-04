@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --main-head: #ffffff;
+    // --main-head: rgb(255, 255, 255);
+    --text-color:#a7a7a7;
+    // --text-color:rgb(167, 167, 167);
+    --text-color2:#959595;
+    // --text-color2:rgb(149, 149, 149);
+    --main-bg:#0e0e0e;
+    // --main-bg:rgb(14, 14, 14);
+    --second-bg:#151515;
+    // --second-bg:rgb(21, 21, 21);
+    --border-main:#ffffff1a;
+    // --border-main:rgba(255, 255, 255, 0.102);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.poiret-one-regular {
+  font-family: "Poiret One", serif !important;
+}
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", serif;
+}
+.poppins {
+  font-family: "Poppins", serif;
+}
+
+
+
+//global class
+
+.poppins {
+  font-family: "Poppins", serif ;
+  font-weight: 500;
+}
+
+.sec_padding{
+  padding: 100px 0;
+}
+//to make it half opacity
+.half_opacity_layer{
+  text-underline-position: from-font;
+  background: linear-gradient(274.23deg,  rgba(255, 255, 255, 0) 2.68%, #FFFFFF 94.92%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+//make it gradient bg green and blur
+.greenBg{
+  position: relative;
+  &::after{
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      // background-image: radial-gradient(circle ,rgba(75, 142, 94, 0.16) ,rgba(75, 142, 94, 0.1),rgba(75, 142, 94, 0.06) , rgba(14, 14, 14, 0));
+      background: rgba(75, 142, 94, 0.16);
+      filter: blur(50px);
+      z-index:-1;
+      width: 705.4px;
+      height: 444.81px;
+      top: -35px;
+      left: -25%;
+      transform: rotate(33.66deg);
+      // angle: -33.66 deg;
+
+  }
+
+}
+//primng
+ul.p-carousel-indicators.p-reset{
+  display: none;
+}
+.p-ripple.p-element.p-link{
+  border:1px solid  ;
+  text-align: center;
+  padding: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: -80px ;
+  // left: 0 !important;
+  right: 0 ;
+  margin:auto 24px  ;
+  &[aria-label="Previous Page"]{
+    margin-right:6rem ;
+  }
+}
+
+body{
+  // overflow-x: hidden;
+  font-family: "Poppins", serif ;
+  background-color: var(--main-bg);
+  h1,h2,h3,h4,h5,h6,i,.h1,.h2,.h3,.h4,.h5,.h6,input,label,textarea{
+    color: var(--main-head);
+  }
+  p,span{
+    color: var(--text-color);
+  }
+  .card{
+    background-color: var(--second-bg);
+    border-radius: 30px !important;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #000;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+//responsive
+@media screen and (max-width: 992px) {
+    .sec_padding{
+        padding: 70px 0;
+      }
+}

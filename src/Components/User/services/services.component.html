@@ -1,0 +1,86 @@
+<section class="sec_padding services">
+    <video class="video-background" autoplay muted loop>
+        <source src="./../../../assets/-51a4-4d37-8060-6916e8f84f4d.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main_title">
+                    <p class="mb-lg-5">
+                        <span class="P_half_opacity_layer">Innovation begins</span>
+                        <span class="animated"><img src="./../../../assets/Vector.png" alt=".."></span>
+                    </p>
+                    <p class="ms-lg-5 ps-lg-5">
+                        <span class="P_half_opacity_layer">with</span>
+                        <span class="animated_button d-inline-block">
+                            <div class="align-self-center">
+                                <img class="img-fluid" src="./../../../assets/qUntitled (1).png" alt="..">
+                            </div>
+
+                                
+                        </span>
+                        <span class="P_half_opacity_layer">Understanding</span>
+                    </p>
+                </div>
+                <div class="desc_title px-lg-5 ">
+                    <p>And at BRACE, your goals and needs are what drive us to comprehensively deliver the best technological solutions that bring you results and truly transform your business.</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+<section class="sec_padding bottom ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12  header_sec d-flex flex-column flex-lg-row">
+                <div class="col-12 col-lg-6 pe-lg-5">
+                    <h2>Innovation is not just a word for us, but is our core and how we function using our state-of-the-art knowledge; creatively & carefully launching your start-up or scaling your enterprise through our set of services.</h2>
+                </div>
+                <div class="col-12 col-lg-6 ps-lg-5">
+                    <ul class="list-unstyled d-flex flex-column">
+                      <li 
+                        *ngFor="let item of items"
+                        class="text-end me-4"
+                        [class.active]="item.id === the_one_item_id || item.id <= the_one_item_id"
+                      >
+                        <span (click)="change_the_one_item_id(item.id)">{{ item.link_text }}</span>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+        <div class="row content_sec">
+            <div class="col-12  d-flex flex-column flex-lg-row">
+                <div class="col-12 col-lg-6 pe-lg-5">
+                    <div>
+                        <h2>{{ the_one_item.link_text }}</h2>
+                        <p>{{ the_one_item.p_1 }}</p>
+                        <p>{{ the_one_item.p_2 }}</p>
+                        <p>{{ the_one_item.p_3 }}</p>
+                        <p>{{ the_one_item.p_4 }}</p>
+                        <p>{{ the_one_item.p_5 }}</p>
+                    </div>              
+                    <button [routerLink]="['/case-details']" class="btn rounded-pill mt-4" type="submit" >
+                        <span >Request service</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 8L22 12L18 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </button>  
+                </div>
+                <div class="col-12 col-lg-6 ps-lg-5 mt-5 mt-lg-0 img_home">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <img class="img-fluid" src="./../../../assets/case details/{{ the_one_item.img }}" alt="..">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<app-footer></app-footer>

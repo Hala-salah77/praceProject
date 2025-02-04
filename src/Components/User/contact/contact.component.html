@@ -1,0 +1,29 @@
+<section class="sec_padding top mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-12 header text-center pb-5">
+                    <h2 class="h1 mb-4 "><span class="h1 half_opacity_layer poppins">Contact our friendly team</span></h2>
+                    <p >Let us know how we can help.</p>
+                </div>
+                
+                <div class="col-12 content mt-5">
+                    <div class="content col-9 mx-auto d-flex flex-column flex-lg-row justify-content-center ">
+                        <div class="col-12 card mb-0" *ngFor="let item of contact_items[0]">
+                            <div class="icon_home">
+                                <img src="./../../../assets/home/{{item.src}}" alt="{{item.alt_text}}">
+                            </div>
+                            <div>
+                                <h3>{{item.h3_text}}</h3>
+                                <p>{{item.p_text}}</p>
+                            </div>
+                            <span>{{item.span_text}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-form></app-form>
+<app-footer></app-footer>

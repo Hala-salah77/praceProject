@@ -1,0 +1,146 @@
+footer.footer{
+    overflow-x: hidden;
+    .top_footer{
+        p{
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32.64px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: var(--main-head);
+        }
+        h2{
+            font-size: 100px;
+            font-weight: 500;
+            line-height: 136px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 48px;
+        }
+        button{
+            padding: 16px 24px;
+            border-radius: 42px ;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            background-color: var(--main-head);
+            
+    
+        }
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(75, 142, 94, 0.16);
+            filter: blur(50px);
+            z-index:-1;
+            width: 705.4px;
+            height: 444.81px;
+            top: 50px;
+            left: -25%;
+            transform: rotate(33.66deg);
+        }
+    }
+    hr{
+        margin-top: 100px;
+        margin-bottom: 60px;
+        border: 1px solid rgba(255, 255, 255, 0.3)
+    }
+    .bottom_footer{
+        ul{
+            li{
+                margin-bottom: 12px;
+                span{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 21.76px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-family: "Plus Jakarta Sans", serif;
+                }
+                
+                a{
+                    font-family: "Poppins", serif;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 19.2px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: var(--main-head);
+                    transition: all 0.2s ease;
+                    &:hover{
+                        text-decoration: underline;
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+
+                }
+            }
+            li.m_b_4{
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+}
+//responsive
+@media screen and (max-width: 991px) {
+    footer.footer{
+        .top_footer{
+            p{
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 400;
+            }
+            h2{
+                font-size: 60px;
+                line-height: 70px;
+            }
+            button{
+                padding: 12px 20px;
+                font-size: 15px;
+                line-height: 20px;
+            }
+            &::after{
+                width: 405.4px;
+                height: 244.81px;
+                top: 70px;
+                left: -25%;
+            }
+        }
+        hr{
+            margin-top: 60px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.3)
+        }
+        .bottom_footer{
+            ul{
+                li{
+                    margin-bottom: 12px;
+                    span{
+                        font-size: 16px;
+                        line-height: 21.76px;
+                    }
+                    
+                    a{
+                        font-size: 16px;
+                        line-height: 19.2px;
+                    }
+                }
+                li.m_b_4{
+                    margin-bottom: 20px;
+                }
+            }
+    
+        }
+    }
+}

@@ -1,0 +1,170 @@
+<section class="sec_padding oppening_home  overflow-x-hidden">
+    <div class="container ">
+        <div class="row">
+            <div class="col-12 d-flex flex-column">
+                <div class="col-12 d-flex flex-lg-row flex-column ">
+
+                    <div class="col-12 col-lg-7 text-lg-start text-center text_h1_p">
+                        <h1 class="text-lg-start text-center">Heartbeat of Digital <br> Innovation</h1>
+                        <p class="text-lg-start text-center">We propel the technologies of the future into the <br> here and now</p>
+                        <a  (click)="scrolldown()"  class="mx-auto text-nowrap btn rounded-pill btn-light me-lg-auto">Explore our works</a>
+                    </div>
+                    <figure class="col-lg-5 text-end ms-auto d-none d-lg-block">
+                        <img class="img-fluid" src="./../../../assets/home/B-moke-up.png" alt="logo">
+                    </figure>
+
+                </div>
+
+                <div class="col-12 d-flex flex-column flex-lg-row text_row">
+
+                    <div class="col-12 col-lg-6 mb-3  pe-lg-4">                        
+                        <p class="h_2 ">Innovative software house agency dedicated to turning your digital dream into a dynamic reality</p>
+                    </div>
+                    <div  class="col-12 col-lg-6  ps-lg-4">
+                        <p>We believe that the future isn't something that just happens, but something we build. With every line of code, every design sketch, and every strategic decision, we're engineering a tomorrow that's brighter.</p>
+                        <button [routerLink]="['/about']" class="mt-3 btn rounded-pill btn-light me-auto" type="submit">Know more</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sec_padding secvices">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column">
+
+                <div class="header mb-5 justify-content-between align-items-center col-12 d-flex flex-column flex-lg-row gap-5">
+                    <p class="h_2 text-start">Our Services</p>
+                    <p>Our vast experience and range of services help solve complex business problems with a personalized approach to each task</p>
+                    <button  class="btn btn-light me-auto text-nowrap" type="submit">
+                        <a href="#" [routerLink]="['/services']" class="text-decoration-none" >Know more
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 8L22 12L18 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+
+                <div class="content">
+
+                    <div class="col-12 d-flex flex-column flex-lg-row line_2 justify-content-between">
+                        <div class=" d-flex flex-row one_2_card" *ngFor="let item of our_services_items[0]">
+                            <figcaption>
+                                <h3>{{item.h3_text}}</h3>
+                                <p>{{item.p_text}}</p>
+                            </figcaption>
+                            <figure>
+                                <img src="./../../../assets/home/{{item.src}}" alt="{{item.alt_text}}">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-flex flex-column flex-lg-row line_3 justify-content-between" >                        
+                        <div class=" d-flex flex-column one_3_card" *ngFor="let item of our_services_items[1]">
+                            <figure class="text-center">                                    
+                                <img src="./../../../assets/home/{{item.src}}" alt="{{item.alt_text}}">
+                            </figure>
+                            <figcaption>
+                                <h3>{{item.h3_text}}</h3>
+                                <p>{{item.p_text}}</p>
+                            </figcaption>
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-flex flex-column flex-lg-row line_2 justify-content-between">
+                        <div class=" d-flex flex-row one_2_card" *ngFor="let item of our_services_items[2]">
+                            <figcaption>
+                                <h3>{{item.h3_text}}</h3>
+                                <p>{{item.p_text}}</p>
+                            </figcaption>
+
+                            <figure>
+                                <img src="./../../../assets/home/{{item.src}}" alt="{{item.alt_text}}">
+                            </figure>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sec_padding cases position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-column flex-xl-row case-studies-section">
+
+                <figcaption class="col-12 col-lg-3 mb-4 left-sec">
+                    <h2>Case Studies</h2>
+                    <p>As promised, our clients’ success is our success. That is why every project we undertake is a partnership built on trust, collaboration, and a shared vision for innovation.</p>
+                    <a [routerLink]="['/case-studies']" class="">See all works  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M9.25403 1.12292C9.25403 0.846779 9.03017 0.622922 8.75403 0.622921L4.25403 0.622922C3.97789 0.622922 3.75403 0.846779 3.75403 1.12292C3.75403 1.39906 3.97789 1.62292 4.25403 1.62292L8.25403 1.62292L8.25403 5.62292C8.25403 5.89906 8.47789 6.12292 8.75403 6.12292C9.03017 6.12292 9.25403 5.89906 9.25403 5.62292L9.25403 1.12292ZM1.35355 9.23051L9.10758 1.47648L8.40048 0.769368L0.646447 8.5234L1.35355 9.23051Z" fill="white"/>
+                        </svg></a>
+                </figcaption>
+
+                <div class="col-12 col-lg-7 offset-lg-5 right-sec">
+                    
+                    <div class="item col-12 mb-5 mt-3 " *ngFor="let item of cases_items">
+                        <figure class="col-12 text-center ">
+                            <img class="w-100 rounded-5" src="./../../../assets/home/{{item.img_src}}" alt="..">
+                        </figure>
+                        <figcaption class="d-flex justify-content-between">
+                            <div class="">
+                                <h3 class="my-4">{{item.h3_text}}</h3>
+                                <p>{{item.p_text}}</p>
+                            </div>
+                        </figcaption>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sec_padding amazing_clients">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex flex-column px-0">
+                <div class="header_sec col-8 mx-auto mb-4 ">
+                    <h2 class="">We’ve been working with amazing Clients to create meaningful results.</h2>
+                    <p>Join hundreds of satisfied customers with a 4.9 approval rating</p>
+                </div>
+
+                
+                <div class="content col-12 mt-5">
+                    <div class="col-12 two_rows_clients d-flex flex-column">
+
+                        <div class="col-12 d-flex  flex-lg-row  one_rows_clients" >
+
+                            <div class="one_client" *ngFor="let item of amazing_clients_items[0]">
+                                <figure>
+                                    <img class="img-fluid" src="./../../../assets/home/{{item.src}}" alt="{{item.alt_text}}">            
+                                </figure>                                    
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 d-flex flex-row one_rows_clients_2">
+
+                            <div class="one_client " *ngFor="let item of amazing_clients_items[1]">
+                                <figure>
+                                    <img class="img-fluid" src="./../../../assets/home/{{item.src}}" alt="{{item.alt_text}}">  
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,169 @@
+section.top{     
+    p{
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 30px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 40px;
+    }   
+    overflow: hidden;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(75, 142, 94, 0.16);
+        filter: blur(50px);
+        z-index:-1;
+        width: 705.4px;
+        height: 444.81px;
+        top: 1110px;
+        right: -25%;
+        transform: rotate(147deg);      
+    }
+    
+    .row{
+        padding-bottom: 70px;
+        .oppening{
+            span{
+                font-size: 64px;
+                font-weight: 500;
+                line-height: 64px;
+                text-align: left !important;
+                text-decoration-skip-ink: none;
+                text-underline-position: from-font;
+                background: linear-gradient(274.23deg,  rgba(255, 255, 255, 0) 2.68%, #FFFFFF 94.92%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;            
+            }
+            button{
+                padding: 12px 24px 12px 24px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: left !important;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                border: 2px solid var(--Secondary-Secondary, rgba(255, 255, 255, 1));
+                color: rgba(255, 255, 255, 1);
+                margin-bottom: 12px;
+                svg{
+                    margin-left: 12px;
+                    // margin-right: 0px;
+    
+                }
+            }
+            p{
+                font-size: 48px;
+                font-weight: 400;
+                line-height: 56.16px;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;            
+                color: rgba(255, 255, 255, 1);
+    
+            }
+        }
+    }
+    .middle{  
+
+        ul{
+            li{
+                span{
+                    font-size: 20px;
+                    font-weight: 300;
+                    line-height: 30px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: var(--main-head);
+                    
+                }
+                span.ul_head{
+                    color: var(--text-color2);
+                }
+            }
+            li:first-child{
+                margin-bottom: 12px;
+            }
+        }
+        .with_m{
+            margin-top: 12rem;
+        }
+    }
+}
+
+//responsive
+@media screen and (max-width: 1200px) {
+
+section.top{    
+    p{
+        font-size: 16px;
+        line-height: 22px;
+
+    }
+    h2{
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }    
+    &::after{
+        width: 405.4px;
+        height: 244.81px;
+        top: 1110px;    
+    }
+    .row{
+        padding-bottom: 70px;
+        .oppening{
+            margin-top: 3rem;
+            span{
+                font-size: 44px;
+                line-height: 50px;       
+            }
+            button{
+                padding: 10px 20px ;
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 12px;
+                svg{
+                    margin-left: 12px;
+                    // margin-right: 0px;
+                }
+            }
+            p{
+                margin-top: 3rem;
+                font-size: 36px;
+                line-height: 56.16px;
+            }
+        }
+    }
+    .middle{  
+
+        ul{
+            li{
+                span{
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+            li:first-child{
+                margin-bottom: 12px;
+            }
+        }
+        .with_m{
+            margin-top: 0rem;
+        }
+    }
+
+
+}
+}

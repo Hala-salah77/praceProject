@@ -1,0 +1,68 @@
+.loading-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10 ;
+    animation: disapper 2s ease forwards;
+  }
+  figure{
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.25s ease-in-out forwards;
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.2}s; // كل عنصر يظهر بعد الذي قبله بـ 0.3 ثانية
+      }
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      filter: blur(20px);
+      z-index: -1;
+      transform: scale(1.2);
+    }
+    img{
+      margin: auto 5px 0 0px !important;
+    }
+  }
+  
+  @keyframes disapper {
+    0% {
+      opacity: 1;
+    }    
+    90%{
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+// تعريف الـ keyframes
+@keyframes fadeIn {
+    from {
+        display: none;
+        opacity: 0;
+        transform: translateX(10px);
+      }
+      to {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+  

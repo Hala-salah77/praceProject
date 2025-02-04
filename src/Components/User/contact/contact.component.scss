@@ -1,0 +1,91 @@
+section.top{
+    .header{
+        h2{
+            span{
+                font-size: 64px;
+                line-height: 87px;
+            }
+        }
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            color: var(--text-color2);
+        }
+    }
+    .content{
+        gap: 30px;
+        .card{
+            width: calc(100% / 3 - 20px);
+            padding: 30px 25px;
+            .icon_home{
+                width: 48px;
+                height: 48px;
+                margin-bottom: 6rem;
+                padding-top: 14px;
+                border: 1px solid rgba(42, 42, 42, 1);
+                border-radius: 8px;
+                text-align: center;
+                svg{
+                    color: var(--main-head);
+                }
+            }
+            h3{
+                font-size: 20px;
+                line-height: 30px;
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            span{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                color:#418661;
+            }
+        }
+    }
+}
+
+//responsive
+@media screen and (max-width: 1200px) {
+    section.top{
+        .header{
+            h2{
+                span{
+                    font-size: 50px;
+                    line-height: 60px;
+                    padding: 0 1rem;
+                }
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        .content{
+            gap: 30px;
+            .card{
+                width: calc(100% / 3 - 20px);
+                padding: 30px 25px;
+                .icon_home{
+                    width: 48px;
+                    height: 48px;
+                    margin-bottom: 4rem;
+                    padding-top: 14px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    section.top{
+        .content{
+            .card{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+<section class="sec_padding top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 oppening d-flex flex-column">
+                <div>
+                    <span>iPharmacy </span>
+                    <button [routerLink]="['/home']" class="btn rounded-pill ms-lg-3" type="submit">View Website
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6.82843H15.6569V12.4853" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 17L15.1421 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mb-5">
+                    <p class="poiret-one-regular">Revolutionizing Pharmaceutical E-Commerce in Egypt.</p>
+                </div>
+                <figure class="col-12 text-center">
+                    <img class="w-100" src="./../../../assets/case details/Rectangle 3.png" alt="..">
+                </figure>
+            </div>
+        </div>
+        <div class="row sec_padding middle">
+
+            <div class="col-12 d-flex flex-column flex-lg-row">
+                <div class="col-12 col-lg-7 pe-lg-4">
+                    <div class="mb-5 col-12">
+                        <p class="mb-0">iPharmacy is a pioneering eCommerce platform tailored to meet the unique needs of the pharmaceutical industry in Egypt.</p>
+                        <p class="mb-0">It offers a streamlined solution for consumers seeking easy access to medications, from over-the counter drugs to prescription-based treatments.</p>
+                        <p >The platform simplifies the process of purchasing pharmaceuticals and health products online, ensuring a smooth, reliable experience from browsing to doorstep delivery.</p>
+                    </div>
+                    <div class="mb-5 col-12">
+                        <h2 class="pt-2">The Challenge</h2>
+                        <p class="mb-0">The growing demand for accessible healthcare services in Egypt has led iPharmacy to seek a technology pioneer as a partner who could help create a digital marketplace that was easy, fast, and user-friendly.</p>
+                        <p>The main goal was to make important healthcare products available to every user no matter what their location or medical needs were.</p>
+                    </div>
+                
+                </div>
+                <div class="col-12 col-lg-5 ps-lg-5 d-flex flex-row">
+                    <ul class="col-6 list-unstyled ps-lg-5">
+                        <li *ngFor="let item of service_timline[0]"><span class="{{item.span_class}}">{{item.span_text}}</span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ul>
+                    <ul class="col-6 list-unstyled">
+                        <li *ngFor="let item of service_timline[1]" class="{{item.li_class}}"><span class="{{item.span_class}}">{{item.span_text}}</span></li>
+                    </ul>
+                </div>                
+            </div>
+
+
+
+
+
+            <div class="col-12">
+                <figure class="col-12 text-center my-5">
+                    <img class="w-100" src="./../../../assets/case details/Pixel 7a.png" alt="">
+                </figure>
+            </div>
+
+            <div class="col-12 my-5" *ngFor="let item of case_details[0]">
+                <figcaption class="col-12 mb-5">
+                    <h2>{{item.h2_text}}</h2>
+                    <p>{{item.p_text}}</p>
+                </figcaption>
+                <figure class="col-12 text-center my-5">
+                    <img  class="w-100" src="./../../../assets/case details/{{item.src}}" alt="">
+                </figure>
+            </div>
+
+            <div class="col-12 d-flex flex-column flex-lg-row justify-content-between">
+                <div class="col-12 col-lg-6 pe-lg-5" >
+                    <div *ngFor="let item of case_details[1]">
+                        <figcaption class="col-12 mb-5 pe-lg-5 ">
+                            <h2>{{item.h2_text}}</h2>
+                            <p>{{item.p_text}}</p>
+                        </figcaption>
+                        <figure class="col-12 my-5">
+                            <img class="w-100" src="./../../../assets/case details/{{item.src}}" alt="..">
+                        </figure>                
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 ps-lg-5 with_m">
+                    <div *ngFor="let item of case_details[2]">
+                        <figcaption class="col-12 mb-5 pe-lg-5 ">
+                            <h2>{{item.h2_text}}</h2>
+                            <p>{{item.p_text}}</p>
+                        </figcaption>
+                        <figure class="col-12 my-5">
+                            <img class="w-100" src="./../../../assets/case details/{{item.src}}" alt="..">
+                        </figure>                
+                    </div>               
+                </div>
+            </div>
+
+            <div class="col-12 d-flex flex-column" *ngFor="let item of case_details[3]">
+
+                <figcaption class="col-12 mb-5 pe-lg-5 ">
+                    <h2>{{item.h2_text}}</h2>
+                    <p>{{item.p_text}}</p>
+                </figcaption>
+                <figure class="text-center my-5">
+                    <img class="w-100" src="./../../../assets/case details/{{item.src}}" alt="..">
+                </figure>
+                <figure class="text-center my-5">
+                    <img class="w-100" src="./../../../assets/case details/{{item.src}}" alt="..">
+                </figure>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<app-form></app-form>
+<app-footer></app-footer>
