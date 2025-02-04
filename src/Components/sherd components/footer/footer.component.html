@@ -28,11 +28,11 @@
                         </ul>
                         <ul class="col-4 list-unstyled Social d-flex flex-column ">
                             <li  class="m_b_4"><span href="#">Social</span></li>
-                            <li  *ngFor="let item1 of socialLinks"><a [href]="item1.url">{{item1.label}}</a></li>
+                            <li  *ngFor="let item1 of socialLinks"><a href="{{item1.url}}">{{item1.label}}</a></li>
                         </ul>
                         <ul class="col-4 list-unstyled GetInTouch d-flex flex-column ">
                             <li class="m_b_4"><span href="#">Get in touch</span></li>
-                            <li *ngFor="let item of contactInfo"><a [href]="item.url" >{{item.label}}l</a></li>
+                            <li *ngFor="let item of contactInfo"><a href="{{item.url}}" >{{item.label}}</a></li>
                         </ul>
                     </div>
                 </div>
